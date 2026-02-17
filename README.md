@@ -1,4 +1,4 @@
-# TgPoster - CLI утилита для постинга в Telegram канал
+## TgPoster - CLI утилита для постинга в Telegram канал
 
 ### Возможности:
 
