@@ -29,7 +29,6 @@ func MarkdownToTelegram(md string) string {
 			continue
 		}
 
-		// Заголовки → bold
 		var headerRe = regexp.MustCompile(`^#{1,6}\s+(.+)$`)
 		if m := headerRe.FindStringSubmatch(line); m != nil {
 			escaped := escapeText(m[1]) // m[1] — текст заголовка

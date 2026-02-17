@@ -55,7 +55,6 @@ func postHandler(token string) http.HandlerFunc {
 
 		tgText := converter.MarkdownToTelegram(req.Markdown)
 
-		// Если указано время — планируем, иначе отправляем сразу
 		if req.PostAt != "" {
 			tz := req.Timezone
 			if tz == "" {
@@ -88,7 +87,6 @@ func postHandler(token string) http.HandlerFunc {
 			return
 		}
 
-		// Немедленная отправка
 		p, err := poster.New(token)
 		if err != nil {
 			writeJSON(w, http.StatusInternalServerError, PostResponse{Error: "failed to init bot"})

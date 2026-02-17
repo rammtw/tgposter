@@ -16,7 +16,6 @@ func New(token string) *Scheduler {
 	return &Scheduler{token: token}
 }
 
-// Schedule запускает горутину, которая ждёт до postTime и отправляет сообщение.
 func (s *Scheduler) Schedule(ctx context.Context, channel, text string, postTime time.Time) {
 	delay := time.Until(postTime)
 
