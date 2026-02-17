@@ -20,7 +20,6 @@ func New(token string) (*Poster, error) {
 	return &Poster{bot: b}, nil
 }
 
-// Send публикует текст в указанный канал и возвращает message_id.
 func (p *Poster) Send(ctx context.Context, channel, text string) (int, error) {
 	msg, err := p.bot.SendMessage(ctx, &bot.SendMessageParams{
 		ChatID:    channel,

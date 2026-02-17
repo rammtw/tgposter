@@ -57,7 +57,6 @@ var scheduleCmd = &cobra.Command{
 			postTime.Format("2006-01-02 15:04 MST"), channel)
 		fmt.Println("Ожидание... (нажмите Ctrl+C для отмены)")
 
-		// Блокируем до завершения
 		select {}
 	},
 }
