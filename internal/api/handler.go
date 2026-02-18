@@ -13,10 +13,10 @@ import (
 )
 
 type PostRequest struct {
-	Channel  string `json:"channel"`            // "@my_channel"
-	Markdown string `json:"markdown"`           // содержимое .md
-	PostAt   string `json:"post_at,omitempty"`  // "2026-02-18 14:00" (опционально)
-	Timezone string `json:"timezone,omitempty"` // "Europe/Moscow" (опционально)
+	Channel  string `json:"channel"`
+	Markdown string `json:"markdown"`
+	PostAt   string `json:"post_at,omitempty"`
+	Timezone string `json:"timezone,omitempty"`
 }
 
 type PostResponse struct {
